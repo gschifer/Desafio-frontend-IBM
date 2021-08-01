@@ -1,0 +1,37 @@
+<div class="container" fxLayout="row" >
+    <section class="login-section" fxLayoutAlign="center center">
+        <form action="" fxLayout="column" fxLayoutAlign="center " class="login-content">
+                <div class="blue-dragon"></div>
+                <h1 class="login-title">Thrive in our app</h1>
+                <mat-form-field appearance="fill">
+                    <mat-label>Login:</mat-label>
+                    <input matInput>
+                </mat-form-field>
+        
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                  
+                  <div class="remember-forgot-password">
+                    <mat-checkbox> Remember me</mat-checkbox>
+                    <a href="">Forgot password?</a>
+                  </div>
+                  <button mat-raised-button class="submit">Submit</button>
+
+                  <div class="signup">
+                    <h4>Not registered yet?<span><a href="/signup">Create an account</a></span></h4>    
+                  </div>
+        </form>
+    </section>
+    <section class="image-section">
+
+    </section>
+</div>
+
+  
+
+  

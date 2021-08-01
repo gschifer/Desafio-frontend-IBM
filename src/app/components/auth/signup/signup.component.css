@@ -1,0 +1,71 @@
+.login-section {
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+}
+
+.login-content {
+    width: 60%;
+}
+
+.login-title {
+    text-align: center;
+    color: rgb(162, 149, 135);
+    font-weight: 800;
+}
+
+.image-section {
+   width: 50%;
+   background-image: url("../../../../assets/dragon.jpeg");
+   background-size: cover;
+   background-position: right;
+}
+
+
+.container {
+    display: flex;
+}
+
+.submit {
+    background-color: rgb(131, 144, 115);
+}
+
+
+input {
+    color: aliceblue;
+}
+
+.remember-forgot-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+    color: aliceblue;
+
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 800;
+}
+
+
+.signup {
+    margin-top: 2%;
+    color: aliceblue;
+}
+
+span {
+    margin-left: 1%;
+}
+
+.back {
+    position: absolute;
+    top: 0%;
+    right: 50%;
+    margin: 2%;
+}

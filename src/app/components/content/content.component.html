@@ -1,0 +1,34 @@
+<!-- <div class="container" >
+    <button mat-raised-button class="create-dragon" color="accent" routerLink="/create" >Create a new dragon</button>
+
+    <div class="cards">
+        <mat-card class="card-associado mat-elevation-z8" *ngFor="let dragon of dragons">
+            <h1>{{dragon.name}}</h1>
+            <div class="actions">
+                <button mat-mini-fab color="accent" routerLink="dragon/{{dragon.id}}"><mat-icon>edit</mat-icon></button>
+                <button mat-mini-fab color="warn" (click)="delete(dragon.id)"><mat-icon>delete</mat-icon></button>
+            </div>
+        </mat-card>
+    </div>
+</div> -->
+
+
+<div class="container">
+    <button mat-raised-button class="create-dragon" color="accent" routerLink="/create">Create a new dragon</button>
+
+    <mat-grid-list cols="4" gutterSize="1.5rem" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let dragon of dragons">
+            <mat-card>
+                <h1>{{dragon.name}}</h1>
+                <div class="actions">
+                    <button mat-mini-fab color="accent" routerLink="dragon/{{dragon.id}}">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" (click)="delete(dragon.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </div>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    height: calc(100% - 64px);
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: rgb(17, 21, 28);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5%;
+    width: 25%; 
+    color: aliceblue;
+}
