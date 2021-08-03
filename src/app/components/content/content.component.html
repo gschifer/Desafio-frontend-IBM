@@ -16,7 +16,7 @@
 <div class="container">
     <button mat-raised-button class="create-dragon" color="accent" routerLink="/create">Create a new dragon</button>
 
-    <mat-grid-list cols="4" gutterSize="1.5rem" rowHeight="1:1">
+    <mat-grid-list *ngIf="!isLoading" cols="4" gutterSize="1.5rem" rowHeight="1:1">
         <mat-grid-tile *ngFor="let dragon of dragons">
             <mat-card>
                 <h1>{{dragon.name}}</h1>
@@ -31,4 +31,5 @@
             </mat-card>
         </mat-grid-tile>
     </mat-grid-list>
+    <mat-spinner color="warn" *ngIf="isLoading"></mat-spinner>
 </div>

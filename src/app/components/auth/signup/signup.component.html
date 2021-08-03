@@ -1,33 +1,29 @@
-<div class="container" fxLayout="row" >
+<div class="container" fxLayout="row">
     <section class="login-section" fxLayoutAlign="center center">
-        <button mat-raised-button class="back" routerLink="">Back</button>
+        <button mat-raised-button class="back" routerLink=""><mat-icon>keyboard_backspace</mat-icon>Back</button>
         <form action="" fxLayout="column" fxLayoutAlign="center " class="login-content">
-                <h1 class="login-title">Create an account</h1>
-                <mat-form-field appearance="fill">
-                  <mat-label>Name:</mat-label>
-                  <input matInput>
-                </mat-form-field>
-                <mat-form-field appearance="fill">
-                    <mat-label>Login:</mat-label>
-                    <input matInput>
-                  </mat-form-field>
-        
-                <mat-form-field appearance="fill">
-                    <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                  </mat-form-field>
+            <div class="white-dragon"></div>
+            <h1 class="login-title">Create an account</h1>
+            <mat-form-field appearance="fill">
+                <mat-label>Email:</mat-label>
+                <input matInput [(ngModel)]="authData.email" name="authData.email">
+            </mat-form-field>
 
-                  <button mat-raised-button class="submit">Create account</button>
+            <mat-form-field appearance="fill">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [(ngModel)]="authData.password" name="authData.password"
+                    [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button *ngIf="!isLoading" mat-raised-button type="submit" class="submit" (click)="registerUser()">Create
+                account</button>
+            <mat-spinner *ngIf="isLoading"></mat-spinner>
         </form>
     </section>
     <section class="image-section">
 
     </section>
 </div>
-
-  
-
-  

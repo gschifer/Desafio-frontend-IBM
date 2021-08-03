@@ -1,3 +1,6 @@
+import { UiService } from './services/ui.service';
+import { AuthGuard } from './auth/auth.guard';
+import { AuthService } from './services/auth.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatButtonModule} from '@angular/material/button';
@@ -7,6 +10,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -56,9 +61,10 @@ import { HeaderComponent } from './components/header/header.component';
     FormsModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard, UiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

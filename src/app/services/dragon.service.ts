@@ -36,9 +36,14 @@ export class DragonService {
 
   message(msg: String): void {
     this.snack.open(`${msg}`, "OK", {
-      horizontalPosition: "end",
       verticalPosition: "top",
       duration: 4000,
+    });
+  }
+
+  errorMessage(msg: String): void {
+    this.snack.open(`${msg}`, "OK", {
+      duration: 6000,
     });
   }
 }

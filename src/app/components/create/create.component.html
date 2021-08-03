@@ -11,8 +11,12 @@
         </mat-form-field>
         <mat-form-field appearance="fill">
             <mat-label>Histories:</mat-label>
-            <input matInput [(ngModel)]="newDragon.histories" name="newDragon.histories" placeholder="The histories of the dragon ">
+            <input matInput [(ngModel)]="newDragon.histories" name="newDragon.histories"
+                placeholder="The histories of the dragon ">
         </mat-form-field>
-        <button mat-raised-button (click)="createDragon()">Create</button>
+        <div class="actions">
+            <button mat-raised-button (click)="createDragon()">Create</button>
+            <button mat-raised-button color="primary" (click)="cancel()">Cancel</button>
+        </div>
     </form>
 </div>

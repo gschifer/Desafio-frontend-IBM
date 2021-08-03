@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth/auth.guard';
+
 import { UpdateComponent } from './components/update/update.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContentComponent } from './components/content/content.component';
@@ -17,15 +19,18 @@ const routes: Routes = [
   },
   {
     path: "",
-    component: ContentComponent
+    component: ContentComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "create",
-    component: CreateComponent
+    component: CreateComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: "dragon/:id",
-    component: UpdateComponent
+    component: UpdateComponent,
+    canActivate: [AuthGuard]
   }
 ];
 

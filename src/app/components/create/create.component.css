@@ -14,3 +14,12 @@ form {
     width: 25%; 
     color: aliceblue;
 }
+
+.actions {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-bottom: 1%;
+}

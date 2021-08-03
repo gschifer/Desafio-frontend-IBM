@@ -11,10 +11,23 @@
     width: 60%;
 }
 
+.white-dragon {
+    background-image: url("../../../../assets/dragon-white.png");
+    width: 600px;
+    height: 350px;
+    background-size: contain;
+    background-position: inherit;
+    background-repeat: no-repeat;
+
+}
+
 .login-title {
     text-align: center;
-    color: rgb(162, 149, 135);
     font-weight: 800;
+    font-size: 2.4rem;
+    color: aliceblue;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: #000;
 }
 
 .image-section {
@@ -23,7 +36,6 @@
    background-size: cover;
    background-position: right;
 }
-
 
 .container {
     display: flex;
@@ -57,6 +69,15 @@ a {
 .signup {
     margin-top: 2%;
     color: aliceblue;
+}
+
+.back {
+    background-color: #5158BB;
+    border-radius: 15px;
+}
+
+mat-icon {
+    margin-right: 5%;
 }
 
 span {
