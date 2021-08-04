@@ -12,7 +12,7 @@ export class DragonService {
 
   apiUrl = "http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon";
 
-  constructor( private http: HttpClient, private snack: MatSnackBar) { }
+  constructor(private http: HttpClient, private snack: MatSnackBar) { }
 
   create(newDragon: Dragon): Observable<Dragon> {
     return this.http.post<Dragon>(this.apiUrl, newDragon)
@@ -46,4 +46,19 @@ export class DragonService {
       duration: 6000,
     });
   }
+
+
+  // message function customizable
+  // message(
+  //   message: any,
+  //   verticalPosition: any,
+  //   action: any,
+  //   horizontalPosition: any,
+  //   duration: any) {
+
+  //   this.snack.open(message, action, {
+  //     horizontalPosition: horizontalPosition,
+  //     verticalPosition: verticalPosition,
+  //     duration: duration
+  //   })
 }

@@ -3,31 +3,31 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
 
-  isAuth: boolean = false;
+    isAuth: boolean = false;
 
-  constructor(private router: Router) {}
+    constructor(private router: Router) { }
 
-  setAuthenticationToTrue() {
-    this.isAuth = true;
-  }
-
-  setAuthenticationToFalse() {
-    this.isAuth = false;
-  }
-
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (!this.isAuth) {
-      this.router.navigate(["/login"]);
+    setAuthenticationToTrue() {
+        this.isAuth = true;
     }
 
-    return true;
-  }
+    setAuthenticationToFalse() {
+        this.isAuth = false;
+    }
 
-  
+    canActivate(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+        if (!this.isAuth) {
+            this.router.navigate(["/login"]);
+        }
+
+        return true;
+    }
+
+
 }

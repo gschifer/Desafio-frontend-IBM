@@ -90,3 +90,7 @@ span {
     right: 50%;
     margin: 2%;
 }
+
+mat-spinner {
+    align-self: center;
+}

@@ -12,7 +12,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class SignupComponent implements OnInit {
     hide = true;
     isLoading = false;
-    private awaitingChanges: Subscription | undefined;
+    private awaitingChangesOnTheLoadingState: Subscription | undefined;
 
     authData: AuthData = {
         email: "",
@@ -24,17 +24,19 @@ export class SignupComponent implements OnInit {
         private uiService: UiService) { }
 
     ngOnInit(): void {
-        this.awaitingChanges = this.uiService.loadingStateChanged.subscribe(isLoading => {
-            this.isLoading = isLoading;
-        });
+        this.awaitingChangesOnTheLoadingState = this.uiService.loadingStateChanged.subscribe(
+            isLoading => (this.isLoading = isLoading)
+        );
     }
 
     registerUser() {
         this.authService.registerUser(this.authData);
     }
 
-    onDestroy() {
-        this.uiService.loadingStateChanged.unsubscribe();
+    ngOndestroy(): void {
+        if (this.awaitingChangesOnTheLoadingState) {
+            this.awaitingChangesOnTheLoadingState?.unsubscribe();
+        }
     }
 
 }

@@ -20,21 +20,23 @@ export class LoginComponent implements OnInit{
     };
 
     constructor(
-        private AuthService: AuthService,
+        private authService: AuthService,
         private uiService: UiService) { }
 
     ngOnInit(): void {
-        this.awaitingChangesOnTheLoadingState = this.uiService.loadingStateChanged.subscribe(isLoading => {
-            this.isLoading = isLoading;
-        });
+        this.awaitingChangesOnTheLoadingState = this.uiService.loadingStateChanged.subscribe(
+            isLoading => (this.isLoading = isLoading)
+        );
     }
 
     login() {
-        this.AuthService.login(this.authData);
+        this.authService.login(this.authData);
     }
 
-    onDestroy() {
-        this.uiService.loadingStateChanged.unsubscribe();
+    ngOnDestroy(): void {
+        if (this.awaitingChangesOnTheLoadingState) {
+            this.awaitingChangesOnTheLoadingState?.unsubscribe();
+        }
     }
 
 

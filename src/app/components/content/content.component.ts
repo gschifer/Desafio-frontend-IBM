@@ -21,9 +21,9 @@ export class ContentComponent implements OnInit {
         private uiService: UiService) { }
 
     ngOnInit(): void {
-        this.awaitingChangesOnTheLoadingState = this.uiService.loadingStateChanged.subscribe(isLoading => {
-            this.isLoading = isLoading;
-        });
+        this.awaitingChangesOnTheLoadingState = this.uiService.loadingStateChanged.subscribe(
+            isLoading => (this.isLoading = isLoading)
+        );
         this.getAll();
     }
 
@@ -32,6 +32,8 @@ export class ContentComponent implements OnInit {
             this.dragons = response;
             console.log(this.isLoading);
             this.uiService.loadingStateChanged.next(false);
+        }, error => {
+            this.service.errorMessage("Error when fetching dragons, please try again later.")
         })
     }
 
@@ -40,6 +42,12 @@ export class ContentComponent implements OnInit {
             this.service.message("Dragon deleted.");
             this.dragons = this.dragons.filter(dragon => dragon.id !== id);
         })
+    }
+
+    ngOnDestroy(): void {
+        if (this.awaitingChangesOnTheLoadingState) {
+            this.awaitingChangesOnTheLoadingState?.unsubscribe();
+        }
     }
 
 }
