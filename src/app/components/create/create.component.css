@@ -23,3 +23,7 @@ form {
 button {
     margin-bottom: 1%;
 }
+
+.form-title {
+    text-align: center;
+}
