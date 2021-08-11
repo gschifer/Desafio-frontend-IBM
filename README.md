@@ -1,5 +1,5 @@
 
-# Desafio Front-end IBM utilizando Angular 
+# <h1 align="center"> Desafio Front-end IBM</h1>
 
 <br />
 
@@ -13,11 +13,12 @@
 
 </div>
 
-<br />
+<br>
 
-Aplicação desenvolvida com base nos requisitos descritos no link: [Teste para Desenvolvedor Front-End](https://github.com/WoopSicredi/jobs/issues/6/).
+<div align="center">Aplicação desenvolvida com base nos requisitos descritos no link: [Teste para Desenvolvedor Front-End](https://github.com/WoopSicredi/jobs/issues/6/).</div>
 
-<br />
+
+<br>
 
 ## :hammer_and_wrench: Funcionalidades:
 
@@ -28,60 +29,78 @@ Aplicação desenvolvida com base nos requisitos descritos no link: [Teste para 
 - Possibilidade de editar um dragão;
 - Possibilidade de excluir um dragão.
 
-<br />
+<br>
 
-## :man_technologist: Imagens da Aplicação
+## :man_technologist: Imagens da Aplicação e suas funcionalidades
 
 <div align="center">
 
-### Homepage
+## Sign up
 
 <img src="https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/login.png" width="100%"/>
 
-<br />
+<br>
 
-### Funcionalidades da aplicação
+### Autenticando-se na aplicação
   
   ![](https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/login.gif)
 
+ </div> 
+ 
+ <br>
+ 
+ ## Sign in
+
+<img src="https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/signin.png" width="100%"/>
+
+<br>
+
+### Cadastrando um usuário
   
+  ![](https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/signin.gif)
+
+ </div> 
+ 
+  <br>
+ 
+ ## Homepage
+
+<img src="https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/homepage.png" width="100%"/>
+
+<br>
+
+### Cadastrando um dragão
   
-<!-- 
-<img src="src/assets/images/github/create-dragon.png" width="100%"/>
+  ![](https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/create.gif)
 
-<br />
+ </div> 
+ 
+   <br>
+ 
+ ## Editar um dragão
 
-### Informações do dragão
+<img src="https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/edit.png" width="100%"/>
 
-<img src="src/assets/images/github/read-dragon.png" width="100%"/>
+<br>
 
-<br />
+### Atualizando informações do dragão
+  
+  ![](https://github.com/gschifer/Desafio-frontend-IBM/blob/master/src/assets/edit.gif)
 
-### Atualização de um dragão
-
-<img src="src/assets/images/github/update-dragon.png" width="100%"/>
-
-<br />
-
-</div>
+ </div> 
+  
 
 <br />
 
 ## :nerd_face: Como rodar esse projeto no seu computador:
 
-Após efetuar o download ou o clone do projeto, e estando dentro da pasta raiz, realizar os seguinte comando no terminal:
+Após efetuar o download ou o clone do projeto (`git clone https://github.com/gschifer/Desafio-frontend-IBM.git ` ) , acesse a pasta raíz do projeto utilizando o comando `cd Desafio-frontend-IBM`. Após isso inicie a aplicação com o seguinte comando abaixo:
 
 ### `ng serve`
 
 <p> Esse comando irá executar a aplicação em modo de desenvolvimento. </p>
-Abra http://localhost:4200 para ver a aplicação funcionando no seu browser.
+Abra http://localhost:4200/ para ver a aplicação funcionando no seu browser.
 
 <br/> 
 
-<div align="center">
-<br/> 
-<br/> 
 
-Made with 🧡 and :coffee: | Find me on <a href="https://www.linkedin.com/in/vivianebresolin/"> LinkedIn</a>
-
-</div> -->
