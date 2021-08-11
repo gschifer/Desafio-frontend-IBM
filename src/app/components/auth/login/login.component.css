@@ -1,7 +1,7 @@
 .login-section {
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);
     width: 50vw;
     height: 100vh;
     display: flex;
@@ -17,7 +17,6 @@ mat-spinner {
 
 .login-title {
     text-align: center;
-    color: al;
     font-weight: 800;
     font-size: 2.4rem;
     color: aliceblue;
@@ -78,4 +77,38 @@ a {
 
 span {
     margin-left: 1%;
+}
+
+@media (min-width:451px) and (max-width: 768px) {
+    .login-section {
+        background: #c31432; 
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+        background: linear-gradient(to right, #240b36, #c31432); 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .login-section {
+        background: #77444c; 
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+        background: linear-gradient(to right, #240b36, #c31432); 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .login-content { 
+        width: 85%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
 }

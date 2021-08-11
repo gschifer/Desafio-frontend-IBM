@@ -3,7 +3,6 @@ import { DragonService } from './dragon.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { AuthData } from '../models/authData';
-import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { AuthGuard } from '../auth/auth.guard';
 

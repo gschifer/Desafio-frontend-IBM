@@ -1,27 +1,27 @@
-.login-section {
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.signup-section {
+    background: #c31432;  
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+    background: linear-gradient(to right, #240b36, #c31432); 
     width: 50vw;
     height: 100vh;
     display: flex;
 }
 
-.login-content {
+.signup-content {
     width: 60%;
 }
 
 .white-dragon {
     background-image: url("../../../../assets/dragon-white.png");
-    width: 600px;
-    height: 350px;
+    width: 500px;
+    height: 300px;
     background-size: contain;
     background-position: inherit;
     background-repeat: no-repeat;
-
+    align-self: center;
 }
 
-.login-title {
+.signup-title {
     text-align: center;
     font-weight: 800;
     font-size: 2.4rem;
@@ -44,7 +44,6 @@
 .submit {
     background-color: rgb(131, 144, 115);
 }
-
 
 input {
     color: aliceblue;
@@ -93,4 +92,67 @@ span {
 
 mat-spinner {
     align-self: center;
+}
+
+
+@media (min-width:451px) and (max-width: 768px) {
+    .signup-section {
+        background: #c31432; 
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+        background: linear-gradient(to right, #240b36, #c31432); 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .image-section {
+        width: 0px;
+        height: 0px;
+    }
+
+    .signup-content { 
+        width: 85%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .back { 
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .signup-section {
+        background: #77444c; 
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  
+        background: linear-gradient(to right, #240b36, #c31432); 
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+
+    .signup-content { 
+        width: 85%;
+    }
+
+    .white-dragon {
+        background-image: url("../../../../assets/dragon-face.png");
+        background-position: center;
+        width: 100%;
+    }
+
+    .image-section {
+        width: 0px;
+        height: 0px;
+    }
+
+    .back { 
+        right: 0%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
 }

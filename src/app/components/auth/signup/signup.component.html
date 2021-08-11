@@ -1,9 +1,9 @@
 <div class="container" fxLayout="row">
-    <section class="login-section" fxLayoutAlign="center center">
+    <section class="signup-section" fxLayoutAlign="center center">
         <button mat-raised-button class="back" routerLink=""><mat-icon>keyboard_backspace</mat-icon>Back</button>
-        <form action="" fxLayout="column" fxLayoutAlign="center " class="login-content">
+        <form action="" fxLayout="column" fxLayoutAlign="center" class="signup-content">
             <div class="white-dragon"></div>
-            <h1 class="login-title">Create an account</h1>
+            <h1 class="signup-title">Create an account</h1>
             <mat-form-field appearance="fill">
                 <mat-label>Email:</mat-label>
                 <input matInput [(ngModel)]="authData.email" name="authData.email">
@@ -23,7 +23,7 @@
             <mat-spinner *ngIf="isLoading"></mat-spinner>
         </form>
     </section>
+    
     <section class="image-section">
-
     </section>
 </div>
